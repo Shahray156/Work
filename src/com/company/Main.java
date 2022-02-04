@@ -26,7 +26,7 @@ public class Main {
 
      public static void printName(Employee[] name) {
          for (int i = 0; i < name.length - 1; i++) {
-             System.out.println(name[i].getName() + "" + name[i].getName1() + "" + name[i].getName2());
+             System.out.println(name[i].getName() + "_" + name[i].getName1() + "_" + name[i].getName2());
          }
     }
 
@@ -58,15 +58,16 @@ public class Main {
 
     // Минимальная зарплата
             public static float salaryMin (Employee[] minSalary) {
-              float min = minSalary[0].getSalary();
-              for (int i = 0; i < minSalary.length; i++) {
-                  if (minSalary[0].getSalary() < min) {
-                     min = minSalary[0].getSalary;
-               }
-               }
-              System.out.println(min);
-                 return min;
-             }
+                float min = minSalary[0].getSalary();
+                int i;
+                for (i = 0; i < minSalary.length; i++) {
+                    if (minSalary[0].getSalary() < min) {
+                        min = minSalary[0].getSalary();
+                    }
+                }
+                System.out.println(min);
+                return min;
+            }
 
 // максимальная зарплата
 
