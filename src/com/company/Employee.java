@@ -24,13 +24,14 @@ public class Employee {
     }
 
 
-@Override
-public String toString() {
+    @Override
+    public String toString() {
         return id + "Фамилия: " + name + ". " + "Имя: " + name1 + ". " + "Отчество: " + name2 + ". " + "Отдел: " + departament + ". " + "Зарплата: " + salary;
-}
-     public static int getId() {
+    }
+
+    public static int getId() {
         return counter;
-}
+    }
 
     public String getName() {
         return name;
@@ -47,6 +48,7 @@ public String toString() {
     public int getSalary() {
         return salary;
     }
+
     public void setSalary(float v) {
         this.salary = salary;
     }
@@ -54,20 +56,9 @@ public String toString() {
     public int getDepartament() {
         return departament;
     }
+
     public void setDepartament() {
         this.departament = departament;
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name,name1,name2,departament, id);
-    }
-
-   // @Override
-   // public boolean equals(Object other) {
-     //   if (this.getClass() != other.getClass()) {
-     //       return false;
-      //  }
-       // Employee employee = (Employee) other;
 
 }
