@@ -1,28 +1,73 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Employee {
 
-   private final String famile;
-    private final String firstName;
-    private final String lastName;
-    private double salary;
+    private static Employee[] employess;
+    private final String name;
+    private final String name1;
+    private final String name2;
+    public float getSalary;
+    private int salary;
     private int departament;
-    private static int id;
-    static Integer counter;
+    private int id;
+    private static Integer counter = 1;
 
-    public Employee(String famile, String firstName, String lastName, double salary, int departament, int id) {
-        this.famile = famile;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Employee(String name, String name1, String name2, int salary, int departament, int id) {
+        this.name = name;
+        this.name1 = name1;
+        this.name2 = name2;
         this.salary = salary;
         this.departament = departament;
         this.id = counter++;
     }
+
+
 @Override
 public String toString() {
-        return id + "" + famile + firstName + lastName;
+        return id + "Фамилия: " + name + ". " + "Имя: " + name1 + ". " + "Отчество: " + name2 + ". " + "Отдел: " + departament + ". " + "Зарплата: " + salary;
 }
-public static int getId() {
-        return id;
+     public static int getId() {
+        return counter;
 }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getName1() {
+        return name1;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+    public void setSalary(float v) {
+        this.salary = salary;
+    }
+
+    public int getDepartament() {
+        return departament;
+    }
+    public void setDepartament() {
+        this.departament = departament;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name,name1,name2,departament, id);
+    }
+
+   // @Override
+   // public boolean equals(Object other) {
+     //   if (this.getClass() != other.getClass()) {
+     //       return false;
+      //  }
+       // Employee employee = (Employee) other;
+
 }
